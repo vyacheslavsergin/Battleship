@@ -1,0 +1,57 @@
+$color-marine: #08325A;
+
+.battleship {
+    $this: &;
+
+    padding: 20px;
+
+    &__ships {
+        position: relative;
+        width: 330px;
+        height: 330px;
+        border: 2px solid $color-marine;
+    }
+
+    &__ship {
+        position: absolute;
+        height: 35px;
+        background-color: darkseagreen;
+        opacity: 0.3;
+
+        &.is-vertical {
+            transform: rotate(90deg);
+            transform-origin: 17.5px 17.5px;
+        }
+
+        &--fourdeck {
+            width: 134px;
+        }
+
+        &--tripledeck {
+            width: 101px;
+        }
+
+        &--doubledeck {
+            width: 68px;
+        }
+
+        &--singledeck {
+            width: 35px;
+        }
+    }
+
+    &__wrecked {
+        position: absolute;
+        z-index: 5;
+        width: 33px;
+        height: 33px;
+
+        &.is-visible {
+            background-color: indianred;
+        }
+    }
+
+    &__message {
+        margin-top: 20px;
+    }
+}

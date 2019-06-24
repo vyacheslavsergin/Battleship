@@ -1,0 +1,5 @@
+@import './base/fonts';
+
+body {
+    @include pt_sans();
+}
